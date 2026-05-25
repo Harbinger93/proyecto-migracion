@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TramitesList from '../components/TramitesList';
+---
+
+<Layout 
+  title="Trámites de Extranjería en España | SomosMigrantes ComoTu"
+  description="Consigue tu Autorización de Residencia, Nacionalidad Española, Arraigos y Reagrupación Familiar con nuestro asesoramiento profesional."
+>
+  
+  <!-- Breadcrumbs & Header Section -->
+  <section class="pt-8 pb-16 sm:pt-12 sm:pb-20 bg-gradient-to-b from-teal-50/20 via-background to-background dark:from-teal-950/5 dark:via-background dark:to-background border-b border-border/30">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs sm:text-sm font-medium text-muted-foreground mb-8">
+        <a href="/" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">Inicio</a>
+        <span class="text-muted-foreground/50">/</span>
+        <span class="text-foreground font-semibold">Trámites</span>
+      </nav>
+
+      <!-- Main Headings -->
+      <div class="text-center max-w-3xl mx-auto reveal active">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-teal-950 dark:text-white leading-tight mb-4">
+          Trámites de Extranjería
+        </h1>
+        <p class="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+          Encuentra el trámite que necesitas y déjanos ayudarte con todo el proceso
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Procedure List Section -->
+  <section class="py-16 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 reveal reveal-delay-100">
+      <TramitesList client:load />
+    </div>
+  </section>
+
+</Layout>

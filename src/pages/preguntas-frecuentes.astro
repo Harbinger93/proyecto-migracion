@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FaqList from '../components/FaqList';
+---
+
+<Layout 
+  title="Preguntas Frecuentes | Extranjería España | SomosMigrantes ComoTu"
+  description="Resolvemos tus dudas sobre arraigo social, nacionalidad española, permisos de residencia, visados y plazos de resolución en España."
+>
+  
+  <!-- Breadcrumbs & Header Section -->
+  <section class="pt-8 pb-16 sm:pt-12 sm:pb-20 bg-gradient-to-b from-teal-50/20 via-background to-background dark:from-teal-950/5 dark:via-background dark:to-background border-b border-border/30">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs sm:text-sm font-medium text-muted-foreground mb-8">
+        <a href="/" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">Inicio</a>
+        <span class="text-muted-foreground/50">/</span>
+        <span class="text-foreground font-semibold">Preguntas frecuentes</span>
+      </nav>
+
+      <!-- Main Headings -->
+      <div class="text-center max-w-3xl mx-auto reveal active">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-teal-950 dark:text-white leading-tight mb-4">
+          Preguntas Frecuentes
+        </h1>
+        <p class="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+          Encuentra respuestas a las dudas más comunes sobre trámites de extranjería
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ List Section -->
+  <section class="py-16 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 reveal reveal-delay-100">
+      <FaqList client:load />
+    </div>
+  </section>
+
+  <!-- Bottom CTA Banner Section -->
+  <section class="py-12 sm:py-20 border-t border-border/40 bg-teal-900/5 dark:bg-teal-950/10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-4xl mx-auto bg-teal-800 dark:bg-teal-950/60 border border-teal-750/50 text-white rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden reveal">
+        
+        <!-- Ambient Light -->
+        <div class="absolute h-72 w-72 rounded-xl bg-teal-700 dark:bg-teal-900 blur-3xl -z-10 -bottom-10 -right-10 opacity-60"></div>
+        
+        <h3 class="text-2xl sm:text-3xl font-extrabold leading-tight mb-3">
+          ¿No encuentras lo que buscas?
+        </h3>
+        <p class="text-sm sm:text-base text-teal-100/80 mb-8 max-w-xl mx-auto">
+          Contáctanos y resolveremos todas tus dudas personalmente
+        </p>
+        <a 
+          href="/contacto" 
+          class="inline-flex items-center gap-2 bg-white hover:bg-teal-50 text-teal-900 dark:text-teal-950 font-bold px-8 py-3.5 rounded-xl text-sm sm:text-base shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+        >
+          Contactar ahora
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

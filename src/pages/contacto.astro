@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactSection from '../components/ContactSection';
+---
+
+<Layout 
+  title="Contacto | Asesoría de Extranjería | SomosMigrantes ComoTu"
+  description="Contacta con nosotros para resolver tus trámites de extranjería, visados, arraigos y nacionalidad en España. Cita presencial en Madrid y asesoría online."
+>
+  
+  <!-- Breadcrumbs & Header Section -->
+  <section class="pt-8 pb-16 sm:pt-12 sm:pb-20 bg-gradient-to-b from-teal-50/20 via-background to-background dark:from-teal-950/5 dark:via-background dark:to-background border-b border-border/30">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs sm:text-sm font-medium text-muted-foreground mb-8">
+        <a href="/" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">Inicio</a>
+        <span class="text-muted-foreground/50">/</span>
+        <span class="text-foreground font-semibold">Contacto</span>
+      </nav>
+
+      <!-- Main Headings -->
+      <div class="text-center max-w-3xl mx-auto reveal active">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-teal-950 dark:text-white leading-tight mb-4">
+          Contáctanos
+        </h1>
+        <p class="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
+          Estamos aquí para ayudarte. Escríbenos y te responderemos lo antes posible
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Contact Section -->
+  <section class="py-16 sm:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 reveal reveal-delay-100">
+      <ContactSection client:load />
+    </div>
+  </section>
+
+</Layout>
